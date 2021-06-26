@@ -159,4 +159,4 @@ void traverse(Stack *ps, void (*pf) (StackEntry))
         (*pf) (ps->entry[i - 1]);
 }
 
-#endif // Linked_Stack
+#endif // :))))
