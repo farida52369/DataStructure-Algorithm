@@ -7,14 +7,15 @@
 import java.util.EmptyStackException;
 
 public interface StackInterface {
-    public void push(Object element) throws StackOverflowError;
-    public Object pop() throws EmptyStackException;
-    public boolean isEmpty();
-    public boolean isFull();
-    public int size();
-    public Object peek() throws EmptyStackException;
-    public void Display(Object element);
-    public void traverse();
-    public void clear();
+    void push(Object element) throws StackOverflowError;
+    Object pop() throws EmptyStackException;
+    boolean isEmpty();
+    boolean isFull();
+    int size();
+    Object peek() throws EmptyStackException;
+    void Display(Object element);
+    void traverse();
+    void clear();
 
 }
+
