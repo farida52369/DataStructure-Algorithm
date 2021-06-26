@@ -1,7 +1,7 @@
 import java.util.EmptyStackException;
 import java.util.Scanner;
 
-public class StackArrayBased {
+public class StackArrayBased implements StackInterface {
     int maxSize;
     Object[] stackArray;
     int top;
@@ -150,4 +150,3 @@ public class StackArrayBased {
 
     }
 }
-
