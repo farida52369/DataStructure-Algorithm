@@ -1,3 +1,8 @@
+
+/***********************************************************
+************** ARRAY BASED IMPLEMENTATION ******************
+************************************************************/
+
 import java.util.EmptyStackException;
 import java.util.Scanner;
 
