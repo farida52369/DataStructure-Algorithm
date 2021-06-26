@@ -4,6 +4,7 @@
 #define StackEntry int
 
 /************* For Linked Lists Implementation ****************/
+// COMMENTING THIS LINE WILL MAKE THE IMPLEMETATION AS ARRAY BASED (ELSE) .. :))
 #define Linked_Stack
 
 /************* If it's Linked List Implementation **************/
