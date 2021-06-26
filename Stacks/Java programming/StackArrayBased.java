@@ -106,8 +106,8 @@ public class StackArrayBased implements StackInterface {
 
                 case "pop":
                     try {
-                        obj.pop();
-                        obj.traverse();
+                        Object e = obj.pop();
+                        obj.Display(e);
                     }
                     catch (EmptyStackException e)
                     {
@@ -143,6 +143,10 @@ public class StackArrayBased implements StackInterface {
                         System.out.println("True");
                     else
                         System.out.println("False");
+                    break;
+
+                case "clear":
+                    obj.clear();
                     break;
 
                 default:
