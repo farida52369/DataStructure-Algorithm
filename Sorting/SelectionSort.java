@@ -1,4 +1,7 @@
+/***************** SELECTION SORT ****************
 
+ABOUT COMPARING EACH ELEMENT WITH THE WHOLE ARRAY TO FINALLY SWAP THE MIN NUM WITH THE CURRENT ONE ..
+**************************************************/
 
 import java.util.Scanner;
 
