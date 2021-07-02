@@ -64,7 +64,7 @@ public class DijkstraShortestPath {
 
         // To STart by the startingVertex
         result[startingVertex] = 0;
-        for (int i = 0; i < dimensionOfGraph - 1; i++)
+        for (int i = 0; i < dimensionOfGraph; i++)
         {
             int minIndexInResult = minDistance(result, check);
             check[minIndexInResult] = true;
