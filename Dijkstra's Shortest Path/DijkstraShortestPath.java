@@ -1,4 +1,7 @@
-package fareeda.ragab;
+/****************** IMPLEMENTATION OF DIJKSTRA ALGORITHM *****************
+* USING AGJACENCY MATRIX AS THE IMPLEMENTATION OF THE GRAPH 
+* THE INITIAL GRAPH IS IN THE SAME DIRECTORY WITH PDF FILE EXPLAINNING THE PROBLEM  
+*************************************************************************/
 
 
 public class DijkstraShortestPath {
@@ -52,6 +55,7 @@ public class DijkstraShortestPath {
         // To prevent infinite Loops -- Checker
         boolean[] check = new boolean[dimensionOfGraph];
 
+        // INITIALIZE RESULT ARRAY IS INFINITE ELEMENTS
         for (int i = 0; i < dimensionOfGraph; i++)
         {
             result[i] = Integer.MAX_VALUE;
@@ -82,9 +86,8 @@ public class DijkstraShortestPath {
 
     public static void main(String[] args)
     {
-
-
         int dimensionOfMatrix = 9;
+        
         // Representation Using Adjacency Matrix
         int[][] graph = new int[][] {{ 0, 4, 0, 0, 0, 0, 0, 8, 0 },
                                      { 4, 0, 8, 0, 0, 0, 0, 11, 0 },
@@ -100,3 +103,18 @@ public class DijkstraShortestPath {
         obj.DijkstraSP(graph, 0);
     }
 }
+
+/************** THE OUTPUT: ****************
+
+Vertex		Length Shortest Path
+0			0
+1			4
+2			12
+3			19
+4			21
+5			11
+6			9
+7			8
+8			14
+
+******************************************/
