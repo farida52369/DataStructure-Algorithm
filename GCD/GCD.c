@@ -16,6 +16,8 @@ https://www.khanacademy.org/computing/computer-science/cryptography/modarithmeti
 
 
 // APPLING EUCLIDEAN ALGORITHM USING RECURSION
+// a SHOULD BE GREATER THAN b IN THE FIRST CALL AND IT WILL REMAIN THAT WAY
+// a AND b COULD BE POSITIVE OR NEGATIVE
 int GCD(int a, int b){
     if (b == 0)
         return a;
