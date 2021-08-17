@@ -34,7 +34,7 @@ vec whatWeNeed(vec v, int k) {
 int main() {
   int n, k, x;
   std::cin >> n >> k;
-
+  // Long Long int -- FOR THE WORST CASE IF FOUND -- (10^5 * 10^5)
   LL ans = 0;
   // map <<num, power>, counter>
   std::map<vec, int> m;
