@@ -21,3 +21,5 @@ int main() {
 
   std::cout << "Is " << n << " prime: " << std::boolalpha << isPrime(n) << "\n";
 }
+
+// How to check number whether Prime or Not!!
