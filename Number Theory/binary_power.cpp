@@ -26,5 +26,6 @@ int main() {
   LL a, b;
   std::cout << "Enter The a & b: ";
   std::cin >> a >> b;
-  std::cout << "a^b: " << binary_pow2(a, b) << "\n";
+  std::cout << "a^b Using Loops: " << binary_pow(a, b) << "\n";
+  std::cout << "a^b using Recursion: " << binary_pow2(a, b) << "\n";
 }
