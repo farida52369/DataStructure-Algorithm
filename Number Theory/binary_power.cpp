@@ -1,6 +1,9 @@
 #include <bits/stdc++.h>
 #define LL long long int
 
+// USE IT WITH LARGE NUMBERS :))
+int MOD = 1e9 + 7;
+
 // Using While Loop
 LL binary_pow(LL a, LL b) {
   LL res = 1;
