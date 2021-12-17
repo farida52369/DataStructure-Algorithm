@@ -6,11 +6,6 @@
  * LARGEST INTEGER WHICH CAN PERFECTLY DIVIDE TWO INTEGERS
  * LCM -- Least Common Multiple
  * THE SMALLEST NUMBER WHICH CAN BE DIVIDED BY BOTH NUMBERS
- *
- * Khan Academy has great resource to know more about the algorithm of
- * EUCLIDEAN:
- * https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/the-euclidean-algorithm
- *
  */
 
 /*
