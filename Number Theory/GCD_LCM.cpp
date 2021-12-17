@@ -2,7 +2,8 @@
 #include <bits/stdc++.h>
 
 /*
- * GCD -- Greatest Common Divisor
+ * GCD -- Greatest Common Divisor 
+ * TIME COMPLEXITY: O(log(min(A, B)))
  * LARGEST INTEGER WHICH CAN PERFECTLY DIVIDE TWO INTEGERS
  * LCM -- Least Common Multiple
  * THE SMALLEST NUMBER WHICH CAN BE DIVIDED BY BOTH NUMBERS
