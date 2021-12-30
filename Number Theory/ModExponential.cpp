@@ -7,7 +7,7 @@ LL mod_exp(LL b, LL n, LL m) {
     LL result = 1;
     do {
         if(n & 1) result = (result * b) % m;
-        b *= b;
+        b = (b * b) % m; // MORE EFFICIENT
     } while((n >>= 1) > 0);
     return result;
 }
