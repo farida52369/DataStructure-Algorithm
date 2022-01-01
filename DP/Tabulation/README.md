@@ -1,2 +1,2 @@
 
-# Problems on Tabulation in Dynamic programming
+# Problems on Tabulation in Dynamic Programming
