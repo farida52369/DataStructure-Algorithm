@@ -1,16 +1,16 @@
 import java.util.*;
 
 public class Graph {
-    private int V;   // No. of vertices
+    private int V; // No. of vertices
 
     // Array of lists -- Represnt Graph
     private List<Integer> adj[];
 
-    
-    @SuppressWarnings("unchecked") // For adj Initialization -:)) 
+    @SuppressWarnings("unchecked") // For adj Initialization -:))
     // A warning by which the compiler indicates that it cannot ensure type safety.
-    // More info: http://www.angelikalanger.com/GenericsFAQ/FAQSections/TechnicalDetails.html#FAQ001 
-    Graph(int v) {  // Constructor
+    // More info:
+    // http://www.angelikalanger.com/GenericsFAQ/FAQSections/TechnicalDetails.html#FAQ001
+    Graph(int v) { // Constructor
         V = v;
         adj = new LinkedList[v];
         for (int i = 0; i < v; ++i)
@@ -39,12 +39,14 @@ public class Graph {
     }
 
     private boolean search(int v, boolean visited[], int goal) {
-        if(v == goal) return true;
+        if (v == goal)
+            return true;
         visited[v] = true;
         for (int n : adj[v]) {
-            if (!visited[n]){
+            if (!visited[n]) {
                 boolean is_found = search(n, visited, goal);
-                if(is_found) return true;
+                if (is_found)
+                    return true;
             }
         }
         return false;
@@ -67,13 +69,15 @@ public class Graph {
         g.addEdge(2, 3);
         g.addEdge(3, 3);
         g.addEdge(3, 4);
-        
+
         // Depth - First - Search Traversal
         System.out.println("DFS Starting at vertex(0):");
         g.DFS(0);
 
         // Search(starting_node, goal): boolean
-        if(g.search(2, 4)) System.out.println("\nWe found the value ..");
-        else System.out.println("\nWe found No-thing ..");
+        if (g.search(2, 4))
+            System.out.println("\nWe found the value ..");
+        else
+            System.out.println("\nWe found No-thing ..");
     }
 }
