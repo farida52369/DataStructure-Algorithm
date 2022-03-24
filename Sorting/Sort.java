@@ -2,7 +2,7 @@
 
 public class Sort {
 
-    public static void selection(int[] arr) {
+    public static void selection(int[] arr) {  // O(N^2)
         int n = arr.length;
 
         for (int i = 0; i < n - 1; i++) {
@@ -22,7 +22,7 @@ public class Sort {
         arr[idx_2] = temp;
     }
 
-    public static void bubble(int[] arr) {
+    public static void bubble(int[] arr) {  // O(N^2)
         boolean notSwapped;
         int n = arr.length;
 
@@ -38,7 +38,7 @@ public class Sort {
         }
     }
 
-    public static void insertion(int[] arr) {
+    public static void insertion(int[] arr) {  // O(N^2)
         int n = arr.length;
 
         for (int i = 1; i < n; i++) {
@@ -52,7 +52,7 @@ public class Sort {
         }
     }
 
-    public static void merge(int[] arr) {
+    public static void merge(int[] arr) {  // O(Nlog(N))
         merge(arr, 0, arr.length - 1);
     }
 
@@ -89,7 +89,7 @@ public class Sort {
         }
     }
 
-    public static void quick(int[] arr) {
+    public static void quick(int[] arr) {  // O(Nlog(N))
         quick(arr, 0, arr.length - 1);
     }
 
