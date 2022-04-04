@@ -71,15 +71,17 @@ public class PartitionEqualSubsetSum {
     private boolean knapsack(int[] nums, int index, int target, boolean[] dp) {
 
         if(index == -1) return false;
-
         if(target == nums[index]) return true;
 
         int num = target - nums[index];
-        if(num >= 0 && !dp[num]){
+        // when nums[index] < target:
+        if(num > 0 && !dp[num]){
             dp[num] = true;
             return knapsack(nums, index - 1, num, dp) ||
-                    knapsack(nums, index - 1, target, dp);
-        }
+                    knapsack(nums, index - 1, target, dp); 
+        } 
+        
+        // when nums[index] > target:
         return knapsack(nums, index - 1, target, dp);
     }
 
