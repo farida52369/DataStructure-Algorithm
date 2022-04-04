@@ -64,6 +64,37 @@ public class PartitionEqualSubsetSum {
         }
         return dp.contains(target);
     }
+    
+    // Faster than: 99%
+    // Updated Version of Brute Force Solution
+    // As Without DP array The solution is Time Limit Exceed
+    private boolean knapsack(int[] nums, int index, int target, boolean[] dp) {
+
+        if(index == -1) return false;
+
+        if(target == nums[index]) return true;
+
+        int num = target - nums[index];
+        if(num >= 0 && !dp[num]){
+            dp[num] = true;
+            return knapsack(nums, index - 1, num, dp) ||
+                    knapsack(nums, index - 1, target, dp);
+        }
+        return knapsack(nums, index - 1, target, dp);
+    }
+
+    public boolean canPartition_3(int[] nums) {
+        int target, n = nums.length;
+
+        // Getting The target value
+        target = Arrays.stream(nums).sum();
+
+        // odd value -> can't be partitioned
+        if(target % 2 == 1) return false;
+
+        target /= 2;
+        return knapsack(nums, n - 1, target, new boolean[target + 1]);
+    }
 }
 
 // Problem Link: https://leetcode.com/problems/partition-equal-subset-sum/
