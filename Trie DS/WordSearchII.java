@@ -31,7 +31,7 @@ public class WordSearchII {
 
     private final int[] dx = {1, 0, -1, 0};
     private final int[] dy = {0, 1, 0, -1};
-    private boolean[][] visited;
+    // private boolean[][] visited;
     int rows, columns;
 
     private boolean valid(int i, int j) {
@@ -41,17 +41,21 @@ public class WordSearchII {
 
     private void dfs(char[][] board, int i, int j, String temp, Set<String> res, TrieNode node) {
 
-        if (!valid(i, j) || visited[i][j] || !node.children.containsKey(board[i][j])) return;
-        visited[i][j] = true;
+        if (!valid(i, j) || board[i][j] == '.' || !node.children.containsKey(board[i][j])) return;
 
         node = node.children.get(board[i][j]);
         temp += board[i][j];
+        // To never visit again
+        char val = board[i][j];
+        board[i][j] = '.';
+        
         if (node.isWord) res.add(temp);
-
         for (int w = 0; w < 4; w++) {
             int new_x = i + dy[w], new_y = j + dx[w];
             dfs(board, new_x, new_y, temp, res, node);
-        }
+        }    
+        // Return its value
+        board[i][j] = val;
     }
 
     public List<String> findWords(char[][] board, String[] words) {
@@ -67,7 +71,6 @@ public class WordSearchII {
         Set<String> res = new HashSet<>();
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                visited = new boolean[rows][columns];
                 dfs(board, i, j, "", res, trie);
             }
         }
