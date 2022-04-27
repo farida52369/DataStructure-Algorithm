@@ -1,7 +1,7 @@
 
 // USING FIND & UNION DS IN SOME APPLICATIONS
 
-public class RedundantConnection {
+public class Solution {
 
     public int[] findRedundantConnection(int[][] edges) {
         // Nodes from (1 -> N) inclusive
