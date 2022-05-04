@@ -1,0 +1,8 @@
+To Compile (In the same directory of SortMain.jaav file) write in terminal: 
+$mkdir out && javac -d out *.java
+$cd out/ && java SortMain
+
+To Test each algorithm, comment the lines not associated to the algorithm wanna test in (main) function Then reCompile The file SortMain.java write in terminal:
+$cd ..  # if you still in out/ directory 
+$javac -d out SortMain.java
+$cd out/ && java SortMain
