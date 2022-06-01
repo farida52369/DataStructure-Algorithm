@@ -46,24 +46,15 @@ public class P10344 {
         if (arr.length <= 1) return false;
 
         int last = arr.length - 2;
-        while (last >= 0) {
-            if (arr[last] < arr[last + 1])
-                break;
-            last--;
-        }
+        while (last >= 0 && arr[last] >= arr[last + 1]) last--;
 
         // possibilities exhausted
         if (last < 0) return false;
 
         int next_greater = arr.length - 1;
-        for (int i = arr.length - 1; i > last; i--) {
-            if (arr[i] > arr[last]) {
-                next_greater = i;
-                break;
-            }
-        }
-
+        while (arr[next_greater] <= arr[last]) next_greater -= 1;
         swap(arr, last, next_greater);
+
         reverse(arr, last + 1, arr.length - 1);
         return true;
     }
