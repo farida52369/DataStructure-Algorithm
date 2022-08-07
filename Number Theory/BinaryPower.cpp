@@ -18,11 +18,11 @@ LL binary_pow(LL a, LL b) {
 // Using Recursion
 LL binary_pow_recursion(LL a, LL b) {
   if (b == 0) return 1;
-  LL res = binary_pow_recursion(a, b / 2);
-  if (res % 2)
-    return res = res * res * a;
-  else
-    return res = res * res;
+ 
+  LL res = pow(a, b / 2);
+  if (b % 2) 
+    return (res%MOD*res%MOD*a%MOD) % MOD;
+  return (res%MOD*res%MOD) % MOD;
 }
 
 int main() {
